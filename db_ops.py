@@ -15,3 +15,15 @@ def get_all_profiles() -> list:
     profiles = session.query(Profile).all()
     session.close()
     return profiles #list of Profile objects
+
+#Get specific Profile from database
+def get_profile(username: str) -> Profile:
+    session = SessionLocal()
+    try:
+        profile = session.query(Profile).filter_by(username=username).one()
+        return profile
+    except NoResultFound:
+        print(f"{username} was not found")
+        return None
+    finally:
+        session.close()
