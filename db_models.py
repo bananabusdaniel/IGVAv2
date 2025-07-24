@@ -18,9 +18,8 @@ Base = declarative_base()
 class Profile(Base):
     __tablename__ = 'profiles'
 
-    #Dry Features: Simple information extracted using instragapi
+    #Scraped Info - Simple information extracted using instragapi
     username = Column(String, primary_key=True)
-    conversion_status = Column(String) #["not_contacted", "messaged", "responded", "converted"]
     following = Column(Integer)
     followers = Column(Integer) 
     follower_following_ratio = Column(Integer)
@@ -35,6 +34,7 @@ class Profile(Base):
     story_highlights_count = Column(Integer)
     active_story = Column(Boolean)
     days_since_last_post = Column(Integer)
+    conversion_status = Column(String) #["scraped", "not_contacted", "messaged", "responded", "converted"]
 
     #Text base analysis - bio and post text
     bio = Column(Text)
