@@ -5,7 +5,18 @@ from igv_types.profile_candidate import Profile
 
 #Function: get list of followers of source account
 def get_source_account_followers(cl: Client, source_account: str, amount: int) -> list:
-    pass
+    followers = []
+    user_id = cl.user_id_from_username(source_account)
+    followers_dict = cl.user_id(user_id, amount)
+    for uid, user in followers_dict.items():
+        followers.append(user.username)
+    return followers
+
+#Main scraping function
+def scrape(username: str, cl: Client):
+    profile = Profile()
+    
+
 #Function: filter out unfitting profiles
 def is_valid_profile(account: Client) -> bool:
     pass
