@@ -1,5 +1,3 @@
-'''
-instagrapi: 2.2.1
-openai: 1.97.1
-sqlalchemy: 2.0.41
-'''
+instagrapi==2.2.1
+openai==1.97.1
+sqlalchemy==2.0.41
