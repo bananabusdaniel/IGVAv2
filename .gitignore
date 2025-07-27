@@ -1,2 +1,5 @@
 accounts/
 venv/
+.env
+config.py
+.gitignore

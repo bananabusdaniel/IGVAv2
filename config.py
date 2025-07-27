@@ -1,0 +1,3 @@
+ALT_ACCOUNTS = ["alt1.json"]
+
+OPENAI_API_KEY = ...
