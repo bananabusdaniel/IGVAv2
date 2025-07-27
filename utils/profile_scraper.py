@@ -1,13 +1,14 @@
 from login import account_login
 from instagrapi import Client
 from db import ops
-from types.profile_candidate import Profile
+from igv_types.profile_candidate import Profile
 
 #Function: get list of followers of source account
 def get_source_account_followers(cl: Client, source_account: str, amount: int) -> list:
+    pass
 #Function: filter out unfitting profiles
 def is_valid_profile(account: Client) -> bool:
-    ...
+    pass
     #check basic needs - create file which stores these needs in one place
     #use is_in_database function here too
     
@@ -68,7 +69,7 @@ def concatanate_profile_data(account, source_account) -> dict:
     }
 
 def store_profile_data() -> None:
-    ...
+    pass
     #store in database. add time delays.
 '''
 
