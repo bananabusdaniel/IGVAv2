@@ -1,4 +1,7 @@
 
+from db import ops
+
+
 class Profile:
     def __init__(self, username, user_id, source_account, 
                  followers, following, posts_count,
@@ -19,7 +22,7 @@ class Profile:
 
     @username.setter
     def username(self, value):
-        if value in ops.get_profile(value):
+        if ops.get_profile(value):
             raise ValueError(f"Username '{value}' is already in the database")
         self._username = value
 
