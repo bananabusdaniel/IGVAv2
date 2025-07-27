@@ -37,6 +37,17 @@ def is_valid_profile(account: Client) -> bool:
             c. Last 6 post photos / captions
     B. Misc Features
         1. Not in database already.
+
+
+    '''
+
+
+
+
+
+
+
+'''#Returns dict of single Profile data (after validity check!)
 def concatanate_profile_data(account, source_account) -> dict:
     return {
         "username": account.username,
