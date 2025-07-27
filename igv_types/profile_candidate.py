@@ -83,3 +83,9 @@ class Profile:
     
 
 
+    @classmethod
+    def is_valid(self) -> bool:
+        ...
+
+    
+
