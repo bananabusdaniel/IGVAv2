@@ -11,6 +11,7 @@ def get_source_account_followers(cl: Client, source_account: str, amount: int) -
     followers_dict = cl.user_followers(user_id, amount)
     for uid, user in followers_dict.items():
         followers.append(user.username)
+    print(f"The list of followers is {followers}")
     return followers
 
 #Main scraping function
@@ -19,7 +20,7 @@ def scrape(username: str, cl: Client, source_account: str = "") -> Profile:
     # check is inexpensive and prevents wasting tokens on profiles we have already processed.
     if ops.get_profile(username):
         raise ValueError(f"Username '{username}' is already in the database")
-
+    
     # Fetch basic user info.  This single call returns several lightweight
     # metrics which we validate progressively before performing any additional API requests.
     user = cl.user_info_by_username(username)

@@ -34,6 +34,7 @@ def account_login(alt_acc: str, base_path: str = "accounts") -> Client:
 
     #Login and dump new settings
     cl.login(username, password)
+    print(f"Sucessfully Logged into {username}")
     cl.dump_settings(settings_path)
     print(f"Session saved for {username} at {settings_path}")
 
