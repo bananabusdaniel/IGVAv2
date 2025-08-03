@@ -14,6 +14,7 @@ def get_source_account_followers(cl: Client, source_account: str, amount: int) -
 
 #Main scraping function
 def scrape(username: str, cl: Client):
+def scrape(username: str, cl: Client, source_account):
     profile = Profile()
     
 
