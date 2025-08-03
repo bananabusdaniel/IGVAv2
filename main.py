@@ -18,6 +18,8 @@ for username in followers:
     try:
         #main scraping function
         scrape(username, cl, SOURCE_ACCOUNTS[0])
-    except:
-        print(f"Invalid profile with username {username}")
+    except Exception as e:
+        print(f"Invalid profile: {username}.")
+        print(f"Error is {e}")
+        print("Moving onto next profile.")
 #scrape source accounts (if needed!)
