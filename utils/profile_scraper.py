@@ -7,7 +7,7 @@ from igv_types.profile_candidate import Profile
 def get_source_account_followers(cl: Client, source_account: str, amount: int) -> list:
     followers = []
     user_id = cl.user_id_from_username(source_account)
-    followers_dict = cl.user_id(user_id, amount)
+    followers_dict = cl.user_followers(user_id, amount)
     for uid, user in followers_dict.items():
         followers.append(user.username)
     return followers
