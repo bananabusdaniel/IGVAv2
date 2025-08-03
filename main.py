@@ -17,7 +17,7 @@ followers = get_source_account_followers(cl, SOURCE_ACCOUNTS[0], amount=500)
 for username in followers:
     try:
         #main scraping function
-        scrape(username, cl)
+        scrape(username, cl, SOURCE_ACCOUNTS[0])
     except:
         print(f"Invalid profile with username {username}")
 #scrape source accounts (if needed!)
