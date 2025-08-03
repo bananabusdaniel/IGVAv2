@@ -35,6 +35,8 @@ class Profile:
     def followers(self, value):
         if value > 15000:
             raise ValueError("Over 15,000 followers")
+        elif value < 10:
+            raise ValueError("Under 10 followers")
         self._followers = value
 
     # --- FOLLOWING ---
