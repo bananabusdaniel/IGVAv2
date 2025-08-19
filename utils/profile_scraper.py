@@ -51,7 +51,7 @@ def scrape(username: str, cl: Client, source_account: str = "") -> Profile:
 
     # Placeholder for future gender detection logic. For now, assume True so
     # that validation relies solely on the `Profile` setters.
-    is_female = True
+    is_female = True #set function from ai_analysis, sending parameters as required info
 
     return Profile(
         username=username,

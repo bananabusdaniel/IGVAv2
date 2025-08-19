@@ -2,10 +2,17 @@ import openai
 import base64
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+
+DELIMITER = "####"
 
 images_data = [{}]
 bio = ...
+
+system_message = "Here you write the role of GPT in returning the response as requested"
+
 '''
+Example of User message
 {
         "type": "image_url",
         "photo": "post"
